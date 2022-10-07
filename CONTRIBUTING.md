@@ -1,35 +1,66 @@
-# Contributors welcome!
+# How To Contribute
 
-As the interest in this project rises, I want to give some guidelines on how you can best contribute to this project.
+Thank you for showing interest in contributing to the WebWorks Dreams website, and welcome!
 
-#### **Did you find a bug?**
+Aside from producing code, there are numerous more methods to contribute. This document's main objective is to provide you a high-level overview of your options for becoming engaged.
 
-- **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/styxlab/next-cms-ghost/issues).
+## Reporting Issues
+We'd want to know about any issues you're having with the website. Please submit an issue in this repository if you find a visual flaw, a functional issue (e.g., links that don't work, server failures when contributing or signing in, etc.), or just a suggestion to make things more manageable.
 
-- If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/styxlab/next-cms-ghost/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or an **executable test case** demonstrating the expected behavior that is not occurring.
+### Look For an Existing Issue
+Before you create a new issue, please do a search in [open issues](https://github.com/gccornejo441/WebWorksDreams/issues) to see if the issue or feature request has already been filed.
 
-#### **Did you write a patch that fixes a bug?**
+If you discover that your problem has previously been addressed, add pertinent comments and your reply. Use a reaction in place of a "+1" comment:
 
-- Open a new GitHub pull request with the patch.
+- 👍 - upvote
+- 👎 - downvote
 
-- Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
+### Making Effective Bug Reports and Feature Requests
+Create a new issue for each bug and feature request. Multiple bugs or feature requests should not be listed in the same issue.
 
-#### **Do you intend to add a new feature or change an existing one?**
+Unless it is for identical input, do not post your issue as a comment to an existing issue. Many problems appear identical but have diverse causes.
 
-- Please propose your change in [Github Discussions](https://github.com/styxlab/next-cms-ghost/discussions) before you start writing code.
+These would be very helpful to include:
+- Reproducible steps (1... 2... 3...) that cause the issue
+- What you expected to see, versus what you actually saw
+- Images, animations, or a link to a video showing the issue occurring
 
-- Do not open an issue on GitHub until you have collected positive feedback about the change. GitHub issues are primarily intended for bug reports and fixes.
+## Writing Code
+Read the information below to understand our project structure and set up your development environment if you are interested in creating code to resolve difficulties.
 
-#### **Do you have questions about this project?**
+**Please note in an open issue your plan to code out the solution to that issue in order to minimize duplication of effort and to save you time. If it is not evident how that issue will be resolved, clarify what you intend to do to ensure that it is consistent with the maintainers' vision for the project.**
 
-- Ask any question about how to use next-cms-ghost in the [Github Discussions](https://github.com/styxlab/next-cms-ghost/discussions).
+The website is written in [React](https://github.com/facebook/react/) using [Next.js](https://github.com/vercel/next.js) from Zeit. [Tailwindcss](https://tailwindcss.com/) is used as a utility-first CSS framework. 
 
-#### **How do you acknowledge contributions?**
+### Directory Structure
+- **components**
+  - _Custom React components_
+- **pages**
+  - _React component containers that correspond to actual pages_
+  - **api**
+    - _Vercel serverless functions to manage CRUD operation to NoSQL DB (MongoDB)_
+- **public**
+  - _Images
+- **styles**
+  - _Stylesheets
+- **utils**
+  - _Reusable utility functions_
 
-- This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) guidelines which means all contributors are regognized, not just the ones who push code. We list all contributors in the [README](https://github.com/styxlab/next-cms-ghost#-contributions).
+### Local Development Environment
+- Install [Node.js and NPM](https://nodejs.org) `>= 8.x`
+- Fork this repository, clone it locally, and keep it in sync by following the instructions [here](https://help.github.com/articles/fork-a-repo/)
+- Install dependencies by running `npm install` in the project directory
+- Create a local environment file named `.env.local`
+- Start the website locally by running
+  ```shell
+  npm run dev
+  ```
+  When it's done building, access it at this link: http://localhost:3000/
 
-If you have any idea or concern that doesn't fit into any of the above categories, just [send me a private message on twitter](https://twitter.com/JamifyJS).
+### Opening a Pull Request
+Any code modifications should be committed to a branch.
 
-Thanks! :heart: :heart: :heart:
+You can open a pull request once you've done making modifications and committed them to your branch. Please include a reference to the issue you resolved in your pull request.
 
-Joost Jansky
+## Thank You!
+Your modest or large contributions to open source make initiatives like this possible. Thank you for taking the time to help.
